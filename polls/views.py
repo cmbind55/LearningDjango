@@ -9,12 +9,22 @@ from django.views import generic
 from django.utils import timezone
 from polls.models import Choice, Question
 
-
-
-
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
+    # page_title = 'Monty Python Polls'
+    # c = RequestContext(generic.ListView, {'page_title': 'Monty Python Polls'})
+
+    # latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    #    context = {'latest_question_list': latest_question_list}
+    #    return render(request, 'polls/index.html', context)
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(IndexView, self).get_context_data(**kwargs)
+        # Add in some context variable that can be accessed by the template
+        context['page_title'] = 'This is AMAZING!!!'
+        return context
 
     def get_queryset(self):
         """
@@ -24,7 +34,6 @@ class IndexView(generic.ListView):
         return Question.objects.filter(
             pub_date__lte=timezone.now()
         ).order_by('-pub_date')[:5]
-
 
 
 class DetailView(generic.DetailView):
@@ -43,10 +52,9 @@ class ResultsView(generic.DetailView):
     template_name = 'polls/results.html'
 
 
-#def vote(request, question_id):
+# def vote(request, question_id):
 #    return HttpResponse("You're voting on question %s." % question_id)
 def vote(request, question_id):
-
     # get an object instance for the passed in question ID from the form POST
     #
     p = get_object_or_404(Question, pk=question_id)
@@ -70,6 +78,7 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
 
+
 def get_queryset(self):
     """
     Return the last five published questions (not including those set to be
@@ -79,3 +88,6 @@ def get_queryset(self):
         pub_date__lte=timezone.now()
     ).order_by('-pub_date')[:5]
 
+def about(request):
+    # View code here... (if any)
+    return render(request, 'polls/about.html', {"page_title": "About this site"})
