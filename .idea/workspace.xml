@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcc9795f-defb-44e4-afa5-0ccdc729bc6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polls/functional_tests.py" afterPath="$PROJECT_DIR$/polls/functional_tests.py" />
+    <list default="true" id="bcc9795f-defb-44e4-afa5-0ccdc729bc6e" name="Default" comment="Added a unittest to check page title in the functional_tests.py file&#10;&#10;This is a selenium based unittest that loads a chrome browser&#10;with a given url localhost:8000/polls and checks the title of &#10;the web page that loads.  Have been unable to resolve a 503&#10;error that occurs whenever browser.quit() is called.  Not sure if&#10;this is a legit error in this case as it is not running a selenium&#10;grid.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mysite_proj.iws" />
@@ -29,6 +34,7 @@
     <SUITE FILE_PATH="coverage/mysite_proj$Unittests_in_NewVisitorTest.coverage" NAME="Unittests in NewVisitorTest Coverage Results" MODIFIED="1438890209838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionViewTests_test_index_view_with_a_future_question.coverage" NAME="Test: polls.tests.QuestionViewTests.test_index_view_with_a_future_question Coverage Results" MODIFIED="1424368577044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$functional_tests.coverage" NAME="functional_tests Coverage Results" MODIFIED="1438890305189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
+    <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests.coverage" NAME="Test: lists.tests Coverage Results" MODIFIED="1438968863717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionMethodTests_test_was_published_recently_with_old_question.coverage" NAME="Test: polls.tests.QuestionMethodTests.test_was_published_recently_with_old_question Coverage Results" MODIFIED="1423851761590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionViewTests_test_index_view_with_a_past_question.coverage" NAME="Test: polls.tests.QuestionViewTests.test_index_view_with_a_past_question Coverage Results" MODIFIED="1424368945623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionMethodTests_test_was_published_recently_with_future_question.coverage" NAME="Test: polls.tests.QuestionMethodTests.test_was_published_recently_with_future_question Coverage Results" MODIFIED="1423851876231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -58,14 +64,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functional_tests.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/polls/functional_tests.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lists/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6363636" vertical-offset="30" max-vertical-offset="840">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-              <folding>
-                <element signature="e#24#54#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lists/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="330">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,6 +126,7 @@
         <option value="$PROJECT_DIR$/polls/templates/polls/about.html" />
         <option value="$PROJECT_DIR$/polls/views.py" />
         <option value="$PROJECT_DIR$/polls/functional_tests.py" />
+        <option value="$PROJECT_DIR$/lists/tests.py" />
       </list>
     </option>
   </component>
@@ -121,7 +136,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="4" />
     <option name="y" value="24" />
-    <option name="width" value="1178" />
+    <option name="width" value="1214" />
     <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -189,51 +204,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="polls" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polls" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polls" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polls" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polls" />
+              <option name="myItemId" value="lists" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -256,12 +227,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in functional_tests">
-    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mysite_proj/polls/templates/polls/index.html">
-      <RunnerSettings RunnerId="JavascriptDebugRunner" />
-      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Django tests.Test: lists.tests">
     <configuration default="false" name="functional_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -355,6 +321,28 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test: lists.tests" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mysite_proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="lists.tests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -595,19 +583,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.mysite_proj" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="2" class="java.lang.String" itemvalue="Python.functional_tests" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in NewVisitorTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in functional_tests" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" />
+      <item index="1" class="java.lang.String" itemvalue="Python.functional_tests" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in NewVisitorTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in functional_tests" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" />
+      <item index="5" class="java.lang.String" itemvalue="Django tests.Test: lists.tests" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in functional_tests" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" />
-        <item index="2" class="java.lang.String" itemvalue="Python.functional_tests" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in NewVisitorTest" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: lists.tests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in functional_tests" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" />
+        <item index="3" class="java.lang.String" itemvalue="Python.functional_tests" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in NewVisitorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -628,28 +616,34 @@
       <option name="project" value="LOCAL" />
       <updated>1438888136425</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added a unittest to check page title in the functional_tests.py file&#10;&#10;This is a selenium based unittest that loads a chrome browser&#10;with a given url localhost:8000/polls and checks the title of &#10;the web page that loads.  Have been unable to resolve a 503&#10;error that occurs whenever browser.quit() is called.  Not sure if&#10;this is a legit error in this case as it is not running a selenium&#10;grid.">
+      <created>1438960381515</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1438960381515</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="24" width="1178" height="733" extended-state="0" />
+    <frame x="4" y="24" width="1214" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22138554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1426146" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1383855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46686748" sideWeight="0.8743633" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46084338" sideWeight="0.12563667" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46084338" sideWeight="0.12602966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26740238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25947282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46084338" sideWeight="0.8743633" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46084338" sideWeight="0.8739703" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -674,7 +668,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Added an about page and a title to the index page&#10;&#10;The about page was added by adding about.html and modifying the views.py, urls.py files.  The about page uses a simpler function call in the view rather than by class as were the other examples.  Adding the page title by variable to the index was more complicated than expected.  I ended up modifying the &quot;context&quot; of the view in order to add the page_title variable, which was then referenceable in the index.html file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added an about page and a title to the index page&#10;&#10;The about page was added by adding about.html and modifying the views.py, urls.py files.  The about page uses a simpler function call in the view rather than by class as were the other examples.  Adding the page title by variable to the index was more complicated than expected.  I ended up modifying the &quot;context&quot; of the view in order to add the page_title variable, which was then referenceable in the index.html file." />
+    <MESSAGE value="Added a unittest to check page title in the functional_tests.py file&#10;&#10;This is a selenium based unittest that loads a chrome browser&#10;with a given url localhost:8000/polls and checks the title of &#10;the web page that loads.  Have been unable to resolve a 503&#10;error that occurs whenever browser.quit() is called.  Not sure if&#10;this is a legit error in this case as it is not running a selenium&#10;grid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a unittest to check page title in the functional_tests.py file&#10;&#10;This is a selenium based unittest that loads a chrome browser&#10;with a given url localhost:8000/polls and checks the title of &#10;the web page that loads.  Have been unable to resolve a 503&#10;error that occurs whenever browser.quit() is called.  Not sure if&#10;this is a legit error in this case as it is not running a selenium&#10;grid." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -755,20 +750,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python3.4/site-packages/django/utils/datastructures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4362" max-vertical-offset="8160">
-          <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.4/site-packages/django/utils/translation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2382" max-vertical-offset="3465">
-          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/importlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33153638" vertical-offset="1482" max-vertical-offset="2415">
@@ -896,14 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="270">
           <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polls/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="776" max-vertical-offset="2085">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1152,11 +1125,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/polls/functional_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6363636" vertical-offset="30" max-vertical-offset="840">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="840">
           <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polls/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2175">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="330">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
