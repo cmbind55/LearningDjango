@@ -1,7 +1,7 @@
-from django.conf.urls import patterns, url, include
+from django.conf.urls import patterns, url
 
 from lists import views
 
 urlpatterns = patterns('',
-    url(r'^home/$', views.home_page, name='lists')
+    url(r'^$', views.home_page),
 )
