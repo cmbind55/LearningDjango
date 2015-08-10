@@ -1,5 +1,10 @@
 {% load staticfiles %}
-
+<html>
 <title>{{ page_title }}</title>
 <link rel="stylesheet" type="text/css" href="{% static 'lists/style.css' %}" />
-<h1>To-Do Lists</h1>
+<h1>Your To-Do list</h1>
+<input id="id_new_item" placeholder="Enter a to-do item" />
+<table id="id_list_table">
+</table>
+
+</html>
