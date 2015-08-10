@@ -8,4 +8,6 @@ urlpatterns = patterns('',
 
     url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^lists/', include('lists.urls', namespace="lists")),
+
 )

@@ -1,5 +1,6 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 
+#from . import views
 from polls import views
 
 urlpatterns = patterns('',
@@ -13,4 +14,7 @@ urlpatterns = patterns('',
 
     # ex: /polls/5/vote/
     url(r'^(?P<question_id>\d+)/vote/$', views.vote, name='vote'),
+
+    # ex: /polls/about/
+    url(r'^about/$', views.about),
 )
