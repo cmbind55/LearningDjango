@@ -6,5 +6,7 @@ from django.http import HttpResponse
 #    return HttpResponse('')
 
 def home_page(request):
-    # View code here... (if any)
-    return render(request, 'lists/index.html', {"page_title": "To-Do"})
+    return render(request, 'lists/index.html', {
+        'new_item_text': request.POST.get('item_text', ''),
+        'page_title': 'To-Do',
+    })

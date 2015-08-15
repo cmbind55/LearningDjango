@@ -3,8 +3,12 @@
 <title>{{ page_title }}</title>
 <link rel="stylesheet" type="text/css" href="{% static 'lists/style.css' %}" />
 <h1>Your To-Do list</h1>
-<input id="id_new_item" placeholder="Enter a to-do item" />
+<form method="POST">
+    <input name="item_text" id="id_new_item" placeholder="Enter a to-do item" />
+    {% csrf_token %}
+</form>
 <table id="id_list_table">
+    <tr><td>1: {{ new_item_text }}</td></tr>
 </table>
 
 </html>
