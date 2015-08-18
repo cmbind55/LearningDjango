@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcc9795f-defb-44e4-afa5-0ccdc729bc6e" name="Default" comment="">
+    <list default="true" id="bcc9795f-defb-44e4-afa5-0ccdc729bc6e" name="Default" comment="Added support for adding an item via a POST&#10;&#10;Changes in views.py, index.html for lists.  There was a bug in&#10;index.html where the input tag was missing its name attribute. The &#10;home_page(request) function in views.py is now returning a render&#10;with two variables, one being the page title, with the new one being&#10;the returned text from a POST from the item_text input control on&#10;the form.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/migrations/0002_item_text.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/functional_tests.py" afterPath="$PROJECT_DIR$/lists/functional_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/templates/lists/index.html" afterPath="$PROJECT_DIR$/lists/templates/lists/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/models.py" afterPath="$PROJECT_DIR$/lists/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/tests.py" afterPath="$PROJECT_DIR$/lists/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/views.py" afterPath="$PROJECT_DIR$/lists/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mysite_proj.iws" />
@@ -26,7 +27,7 @@
     <SUITE FILE_PATH="coverage/mysite_proj$Unittest_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later.coverage" NAME="Unittest NewVisitorTest.test_can_start_a_list_and_retrieve_it_later Coverage Results" MODIFIED="1438890378012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests_HomePageTest_test_home_page_can_save_a_POST_request.coverage" NAME="Test: lists.tests.HomePageTest.test_home_page_can_save_a_POST_request Coverage Results" MODIFIED="1439668959282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$functional_tests.coverage" NAME="functional_tests Coverage Results" MODIFIED="1438890305189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
-    <SUITE FILE_PATH="coverage/mysite_proj$Unittests_in_functional_tests__1_.coverage" NAME="Unittests in functional_tests (1) Coverage Results" MODIFIED="1439673872931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lists" />
+    <SUITE FILE_PATH="coverage/mysite_proj$Unittests_in_functional_tests__1_.coverage" NAME="Unittests in functional_tests (1) Coverage Results" MODIFIED="1439912054618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lists" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests_HomePageTest.coverage" NAME="Test: lists.tests.HomePageTest Coverage Results" MODIFIED="1439060543083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionViewTests_test_index_view_with_a_past_question.coverage" NAME="Test: polls.tests.QuestionViewTests.test_index_view_with_a_past_question Coverage Results" MODIFIED="1424368945623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionMethodTests.coverage" NAME="Test: polls.tests.QuestionMethodTests Coverage Results" MODIFIED="1424452891142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -39,7 +40,7 @@
     <SUITE FILE_PATH="coverage/mysite_proj$Unittests_in_NewVisitorTest.coverage" NAME="Unittests in NewVisitorTest Coverage Results" MODIFIED="1438890209838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
     <SUITE FILE_PATH="coverage/mysite_proj$Unittest_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later__1_.coverage" NAME="Unittest NewVisitorTest.test_can_start_a_list_and_retrieve_it_later (1) Coverage Results" MODIFIED="1439300073712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lists" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionViewTests_test_index_view_with_a_future_question.coverage" NAME="Test: polls.tests.QuestionViewTests.test_index_view_with_a_future_question Coverage Results" MODIFIED="1424368577044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests.coverage" NAME="Test: lists.tests Coverage Results" MODIFIED="1439669266371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests.coverage" NAME="Test: lists.tests Coverage Results" MODIFIED="1439924496472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionMethodTests_test_was_published_recently_with_old_question.coverage" NAME="Test: polls.tests.QuestionMethodTests.test_was_published_recently_with_old_question Coverage Results" MODIFIED="1423851761590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionMethodTests_test_was_published_recently_with_future_question.coverage" NAME="Test: polls.tests.QuestionMethodTests.test_was_published_recently_with_future_question Coverage Results" MODIFIED="1423851876231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionViewTests_test_index_view_with_no_questions.coverage" NAME="Test: polls.tests.QuestionViewTests.test_index_view_with_no_questions Coverage Results" MODIFIED="1424366985251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -78,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functional_tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functional_tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lists/functional_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59090906" vertical-offset="525" max-vertical-offset="1095">
-              <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1110">
+              <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -100,13 +101,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lists/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="615">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.3181818" vertical-offset="540" max-vertical-offset="915">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lists/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+              <folding>
+                <marker date="1439924290000" expanded="true" signature="56:96" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -137,10 +150,11 @@
         <option value="$PROJECT_DIR$/lists/Templates/lists/index.html" />
         <option value="$PROJECT_DIR$/lists/urls.py" />
         <option value="$PROJECT_DIR$/mysite_proj/settings.py" />
-        <option value="$PROJECT_DIR$/lists/tests.py" />
         <option value="$PROJECT_DIR$/lists/templates/lists/index.html" />
         <option value="$PROJECT_DIR$/lists/views.py" />
         <option value="$PROJECT_DIR$/lists/functional_tests.py" />
+        <option value="$PROJECT_DIR$/lists/tests.py" />
+        <option value="$PROJECT_DIR$/lists/models.py" />
       </list>
     </option>
   </component>
@@ -331,7 +345,7 @@
       <recent name="$PROJECT_DIR$/lists/Templates/lists" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in functional_tests (1)">
+  <component name="RunManager" selected="Django tests.Test: lists.tests">
     <configuration default="false" name="Test: lists.tests.HomePageTest.test_root_url_resolves_to_home_page_view" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -766,12 +780,18 @@
       <option name="project" value="LOCAL" />
       <updated>1439214507244</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added support for adding an item via a POST&#10;&#10;Changes in views.py, index.html for lists.  There was a bug in&#10;index.html where the input tag was missing its name attribute. The &#10;home_page(request) function in views.py is now returning a render&#10;with two variables, one being the page title, with the new one being&#10;the returned text from a POST from the item_text input control on&#10;the form.">
+      <created>1439674474114</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1439674474114</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="24" width="1214" height="733" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22138554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -780,17 +800,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46084338" sideWeight="0.12602966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25947282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46084338" sideWeight="0.8739703" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46084338" sideWeight="0.8739703" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -816,7 +836,8 @@
     <MESSAGE value="Add lists app to the project and added an initial unit test" />
     <MESSAGE value="Added URL mapping that handles the polls and lists apps" />
     <MESSAGE value="Made lists its own Django app in site settings, updates urls and views&#10;&#10;Now the mysite project has two applications: polls and lists.  This had&#10;to be declared in the site settings.py for the templates path to be seen&#10;by the framework.  urls and views were updated to flesh out lists to &#10;have a index.html and root mapping." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made lists its own Django app in site settings, updates urls and views&#10;&#10;Now the mysite project has two applications: polls and lists.  This had&#10;to be declared in the site settings.py for the templates path to be seen&#10;by the framework.  urls and views were updated to flesh out lists to &#10;have a index.html and root mapping." />
+    <MESSAGE value="Added support for adding an item via a POST&#10;&#10;Changes in views.py, index.html for lists.  There was a bug in&#10;index.html where the input tag was missing its name attribute. The &#10;home_page(request) function in views.py is now returning a render&#10;with two variables, one being the page title, with the new one being&#10;the returned text from a POST from the item_text input control on&#10;the form." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support for adding an item via a POST&#10;&#10;Changes in views.py, index.html for lists.  There was a bug in&#10;index.html where the input tag was missing its name attribute. The &#10;home_page(request) function in views.py is now returning a render&#10;with two variables, one being the page title, with the new one being&#10;the returned text from a POST from the item_text input control on&#10;the form." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -893,7 +914,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/lists/functional_tests.py</url>
-          <line>32</line>
+          <line>37</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
@@ -1154,16 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lists/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="615">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite_proj/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45454547" vertical-offset="0" max-vertical-offset="330">
@@ -1177,7 +1188,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1202,9 +1213,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lists/functional_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59090906" vertical-offset="525" max-vertical-offset="1095">
-          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1110">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding>
+            <marker date="1439924290000" expanded="true" signature="56:96" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3181818" vertical-offset="540" max-vertical-offset="915">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
