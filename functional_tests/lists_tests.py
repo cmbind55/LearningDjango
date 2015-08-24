@@ -2,9 +2,9 @@ __author__ = 'cbinder'
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import unittest
+from django.test import LiveServerTestCase
 
-class NewVisitorTest(unittest.TestCase):
+class LiveNewVisitorTest(LiveServerTestCase):
     def setUp(self):  #2
         #chrome_option = webdriver.ChromeOptions()
         #chrome_option.add_argument('--proxy-server=us-auto.proxy.lexmark.com:80' )
@@ -17,6 +17,7 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.close()
         #self.browser.quit()
 
+    # helper function
     def check_for_row_in_list_table(self, row_text):
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
@@ -25,8 +26,12 @@ class NewVisitorTest(unittest.TestCase):
     def test_can_start_a_list_and_retrieve_it_later(self):  #4
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
-        self.browser.get('http://localhost:8000/lists')
+        #self.browser.get('http://localhost:8000/lists')
         #self.browser.get('http://www.google.com')
+        #lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
+        #lists_live_server_url = '{0}{1}'.format(self.live_server_url, '/lists')
+        lists_live_server_url = self.live_server_url
+        self.browser.get(lists_live_server_url)
 
         # She notices the page title and header mention to-do lists
         self.assertIn('To-Do', self.browser.title)
