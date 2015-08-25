@@ -4,4 +4,6 @@ from lists import views
 
 urlpatterns = patterns('',
     url(r'^$', views.home_page),
+    url(r'^the-only-list-in-the-world/$', views.view_list, name='view_list'),
+
 )
