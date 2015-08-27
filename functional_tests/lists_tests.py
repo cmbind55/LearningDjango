@@ -3,6 +3,7 @@ __author__ = 'cbinder'
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from django.test import LiveServerTestCase
+import time
 
 class LiveNewVisitorTest(LiveServerTestCase):
     def setUp(self):  #2
@@ -28,10 +29,9 @@ class LiveNewVisitorTest(LiveServerTestCase):
         # to check out its homepage
         #self.browser.get('http://localhost:8000/lists')
         #self.browser.get('http://www.google.com')
-        #lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
+        lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
         #lists_live_server_url = '{0}{1}'.format(self.live_server_url, '/lists')
-        lists_live_server_url = self.live_server_url
-        self.browser.get('http://localhost:8081/lists')
+        self.browser.get(lists_live_server_url)
 
         # She notices the page title and header mention to-do lists
         self.assertIn('To-Do', self.browser.title)
@@ -52,6 +52,7 @@ class LiveNewVisitorTest(LiveServerTestCase):
         # When she hits enter, she is taken to a new URL,
         # and now the page lists "1: Buy peacock feathers" as an item in a
         # to-do list table
+        time.sleep(2)
         inputbox.send_keys(Keys.ENTER)
         edith_list_url = self.browser.current_url
         self.assertRegex(edith_list_url, '/lists.+')
@@ -63,6 +64,7 @@ class LiveNewVisitorTest(LiveServerTestCase):
         # methodical)
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Use peacock feathers to make a fly')
+        time.sleep(2)
         inputbox.send_keys(Keys.ENTER)
 
         # The page updates again, and now shows both items on her list
@@ -76,10 +78,12 @@ class LiveNewVisitorTest(LiveServerTestCase):
 
         # Francis visits the home page.  There is no sign of Edith's
         # list
-        self.browser.get('http://localhost:8081/lists')
+        lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
+        self.browser.get(lists_live_server_url)
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertNotIn('make a fly', page_text)
+        time.sleep(2)
 
         # Francis starts a new list by entering a new item. He
         # is less interesting than Edith...
@@ -91,11 +95,14 @@ class LiveNewVisitorTest(LiveServerTestCase):
         francis_list_url = self.browser.current_url
         self.assertRegex(francis_list_url, '/lists/.+')
         self.assertNotEqual(francis_list_url, edith_list_url)
+        time.sleep(10)
 
         # Again, there is no trace of Edith's list
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
+        time.sleep(10)
         self.assertIn('Buy milk', page_text)
+        time.sleep(10)
 
         # Satisfied, they both go back to sleep
 
