@@ -8,10 +8,6 @@ from lists.models import Item
 #    return HttpResponse('')
 
 def home_page(request):
-    if request.method == 'POST':
-        Item.objects.create(text=request.POST['item_text'])
-        return redirect('/lists/the-only-list-in-the-world/', {'page_title': 'To-Do'})
-
     return render(request, 'lists/index.html', {
         'page_title': 'To-Do',
     })
@@ -22,3 +18,7 @@ def view_list(request):
         'page_title': 'To-Do',
         'items': items,
     })
+
+def new_list(request):
+    Item.objects.create(text=request.POST['item_text'])
+    return redirect('/lists/the-only-list-in-the-world/', {'page_title': 'To-Do'})
