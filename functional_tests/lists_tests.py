@@ -29,8 +29,10 @@ class LiveNewVisitorTest(LiveServerTestCase):
         # to check out its homepage
         #self.browser.get('http://localhost:8000/lists')
         #self.browser.get('http://www.google.com')
-        lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
         #lists_live_server_url = '{0}{1}'.format(self.live_server_url, '/lists')
+
+        lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
+        #lists_live_server_url = 'http://localhost:8000/lists'
         self.browser.get(lists_live_server_url)
 
         # She notices the page title and header mention to-do lists
@@ -78,7 +80,6 @@ class LiveNewVisitorTest(LiveServerTestCase):
 
         # Francis visits the home page.  There is no sign of Edith's
         # list
-        lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
         self.browser.get(lists_live_server_url)
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
@@ -105,5 +106,4 @@ class LiveNewVisitorTest(LiveServerTestCase):
         time.sleep(10)
 
         # Satisfied, they both go back to sleep
-
 
