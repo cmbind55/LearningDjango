@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcc9795f-defb-44e4-afa5-0ccdc729bc6e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lists/static/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/templates/lists/base.html" afterPath="$PROJECT_DIR$/lists/templates/lists/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lists/templates/lists/list.html" afterPath="$PROJECT_DIR$/lists/templates/lists/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functional_tests/lists_tests.py" afterPath="$PROJECT_DIR$/functional_tests/lists_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite_proj/settings.py" afterPath="$PROJECT_DIR$/mysite_proj/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mysite_proj.iws" />
@@ -100,21 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lists/templates/lists/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22522523">
+            <state vertical-scroll-proportion="-3.125">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.111111">
-              <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.77272725">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -197,7 +194,6 @@
         <option value="$PROJECT_DIR$/lists/Templates/lists/index.html" />
         <option value="$PROJECT_DIR$/lists/functional_tests.py" />
         <option value="$PROJECT_DIR$/polls/functional_tests.py" />
-        <option value="$PROJECT_DIR$/mysite_proj/settings.py" />
         <option value="$PROJECT_DIR$/functional_tests/polls_tests.py" />
         <option value="$PROJECT_DIR$/lists/urls.py" />
         <option value="$PROJECT_DIR$/lists/tests.py" />
@@ -209,6 +205,7 @@
         <option value="$PROJECT_DIR$/lists/templates/lists/list.html" />
         <option value="$PROJECT_DIR$/lists/templates/lists/base.html" />
         <option value="$PROJECT_DIR$/lists/static/base.css" />
+        <option value="$PROJECT_DIR$/mysite_proj/settings.py" />
       </list>
     </option>
   </component>
@@ -922,7 +919,13 @@
       <option name="project" value="LOCAL" />
       <updated>1441029207864</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Make use of bootstrap stylesheets to modify index and lists.html&#10;&#10;Added divs to base.html to use jumbotron class.  Added a base.css&#10;file for overriding bootstrap.  Changed to StaticLiveServerTestCase&#10;in order for CSS to load in the functional tests.  Added table class&#10;tag in list.html.">
+      <created>1441033866142</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1441033866142</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -979,7 +982,8 @@
     <MESSAGE value="Enable adding items to individual lists&#10;&#10;Added a new view &quot;add_item&quot;, updated view_list to accept a&#10;list_id in parameter, then to filter and render that list. Modified&#10;URLS.PY to accept an add_item URL and updated to search explicitly&#10;for numbers in the URL path (not as greedy).  Added NewItemTest&#10;test cases.  Updated ListViewTest to see that only items for the&#10;given list are displayed and to see that the expected list is &#10;passed to the template.  Updated LIST.HTML to incorporate &#10;receiving a list.id." />
     <MESSAGE value="Changed mysite/urls to call an alias instead of namespace" />
     <MESSAGE value="Added bootstrap to files and refactored lists html with templates&#10;&#10;Pulled the bootstrap version from the tutorial (3.3.4).  Unzipped &#10;the files into the lists/static directory.  Updated lists/index.html&#10;and lists/list.html, added base.html to add some blocks for header&#10;and form actions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bootstrap to files and refactored lists html with templates&#10;&#10;Pulled the bootstrap version from the tutorial (3.3.4).  Unzipped &#10;the files into the lists/static directory.  Updated lists/index.html&#10;and lists/list.html, added base.html to add some blocks for header&#10;and form actions." />
+    <MESSAGE value="Make use of bootstrap stylesheets to modify index and lists.html&#10;&#10;Added divs to base.html to use jumbotron class.  Added a base.css&#10;file for overriding bootstrap.  Changed to StaticLiveServerTestCase&#10;in order for CSS to load in the functional tests.  Added table class&#10;tag in list.html." />
+    <option name="LAST_COMMIT_MESSAGE" value="Make use of bootstrap stylesheets to modify index and lists.html&#10;&#10;Added divs to base.html to use jumbotron class.  Added a base.css&#10;file for overriding bootstrap.  Changed to StaticLiveServerTestCase&#10;in order for CSS to load in the functional tests.  Added table class&#10;tag in list.html." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1443,14 +1447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.111111">
-          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functional_tests/lists_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4444447">
@@ -1479,8 +1475,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lists/templates/lists/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22522523">
+        <state vertical-scroll-proportion="-3.125">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77272725">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
