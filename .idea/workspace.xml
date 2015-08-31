@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcc9795f-defb-44e4-afa5-0ccdc729bc6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functional_tests/lists_tests.py" afterPath="$PROJECT_DIR$/functional_tests/lists_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite_proj/settings.py" afterPath="$PROJECT_DIR$/mysite_proj/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mysite_proj.iws" />
@@ -108,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.444445">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4090909">
+              <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -142,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lists_tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lists_tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functional_tests/lists_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6363636">
+            <state vertical-scroll-proportion="-7.7777777">
               <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
@@ -205,8 +205,8 @@
         <option value="$PROJECT_DIR$/lists/templates/lists/list.html" />
         <option value="$PROJECT_DIR$/lists/templates/lists/base.html" />
         <option value="$PROJECT_DIR$/lists/static/base.css" />
-        <option value="$PROJECT_DIR$/mysite_proj/settings.py" />
         <option value="$PROJECT_DIR$/functional_tests/lists_tests.py" />
+        <option value="$PROJECT_DIR$/mysite_proj/settings.py" />
       </list>
     </option>
   </component>
@@ -926,7 +926,13 @@
       <option name="project" value="LOCAL" />
       <updated>1441033866142</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added new classmethods to prepare for staging server&#10;&#10;Added setUpClass and tearDownClass which will parse args to &#10;the functional test and default to running the live_server_url&#10;if no actual staging server address is passed.">
+      <created>1441040407187</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1441040407187</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -984,7 +990,8 @@
     <MESSAGE value="Changed mysite/urls to call an alias instead of namespace" />
     <MESSAGE value="Added bootstrap to files and refactored lists html with templates&#10;&#10;Pulled the bootstrap version from the tutorial (3.3.4).  Unzipped &#10;the files into the lists/static directory.  Updated lists/index.html&#10;and lists/list.html, added base.html to add some blocks for header&#10;and form actions." />
     <MESSAGE value="Make use of bootstrap stylesheets to modify index and lists.html&#10;&#10;Added divs to base.html to use jumbotron class.  Added a base.css&#10;file for overriding bootstrap.  Changed to StaticLiveServerTestCase&#10;in order for CSS to load in the functional tests.  Added table class&#10;tag in list.html." />
-    <option name="LAST_COMMIT_MESSAGE" value="Make use of bootstrap stylesheets to modify index and lists.html&#10;&#10;Added divs to base.html to use jumbotron class.  Added a base.css&#10;file for overriding bootstrap.  Changed to StaticLiveServerTestCase&#10;in order for CSS to load in the functional tests.  Added table class&#10;tag in list.html." />
+    <MESSAGE value="Added new classmethods to prepare for staging server&#10;&#10;Added setUpClass and tearDownClass which will parse args to &#10;the functional test and default to running the live_server_url&#10;if no actual staging server address is passed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new classmethods to prepare for staging server&#10;&#10;Added setUpClass and tearDownClass which will parse args to &#10;the functional test and default to running the live_server_url&#10;if no actual staging server address is passed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1472,21 +1479,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.444445">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functional_tests/lists_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6363636">
+        <state vertical-scroll-proportion="-7.7777777">
           <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4090909">
+          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
