@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcc9795f-defb-44e4-afa5-0ccdc729bc6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite_proj/settings.py" afterPath="$PROJECT_DIR$/mysite_proj/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functional_tests/lists_tests.py" afterPath="$PROJECT_DIR$/functional_tests/lists_tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mysite_proj.iws" />
@@ -23,6 +23,7 @@
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionViewTests_test_index_view_with_two_past_questions.coverage" NAME="Test: polls.tests.QuestionViewTests.test_index_view_with_two_past_questions Coverage Results" MODIFIED="1423762253679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests_NewItemTest.coverage" NAME="Test: lists.tests.NewItemTest Coverage Results" MODIFIED="1440694328082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Unittest_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later.coverage" NAME="Unittest NewVisitorTest.test_can_start_a_list_and_retrieve_it_later Coverage Results" MODIFIED="1438890378012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
+    <SUITE FILE_PATH="coverage/mysite_proj$Test__functional_tests_lists_tests_NewVisitorTest_test_layout_and_styling.coverage" NAME="Test: functional_tests.lists_tests.NewVisitorTest.test_layout_and_styling Coverage Results" MODIFIED="1441039901610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests_HomePageTest_test_home_page_can_save_a_POST_request.coverage" NAME="Test: lists.tests.HomePageTest.test_home_page_can_save_a_POST_request Coverage Results" MODIFIED="1439929898741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$functional_tests.coverage" NAME="functional_tests Coverage Results" MODIFIED="1440166084378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
     <SUITE FILE_PATH="coverage/mysite_proj$Unittests_in_functional_tests__1_.coverage" NAME="Unittests in functional_tests (1) Coverage Results" MODIFIED="1440032270909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lists" />
@@ -36,7 +37,7 @@
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls.coverage" NAME="Test: polls Coverage Results" MODIFIED="1423676698480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests_HomePageTest_test_home_page_returns_correct_html.coverage" NAME="Test: lists.tests.HomePageTest.test_home_page_returns_correct_html Coverage Results" MODIFIED="1439230964001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__lists_tests_HomePageTest_test_root_url_resolves_to_home_page_view.coverage" NAME="Test: lists.tests.HomePageTest.test_root_url_resolves_to_home_page_view Coverage Results" MODIFIED="1439060599244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/mysite_proj$Test__functional_tests_lists_tests.coverage" NAME="Test: functional_tests.lists_tests Coverage Results" MODIFIED="1441033541490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/mysite_proj$Test__functional_tests_lists_tests.coverage" NAME="Test: functional_tests.lists_tests Coverage Results" MODIFIED="1441039599884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$Test__polls_tests_QuestionMethodTests_test_was_published_recently_with_recent_question.coverage" NAME="Test: polls.tests.QuestionMethodTests.test_was_published_recently_with_recent_question Coverage Results" MODIFIED="1423851670973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/mysite_proj$settings.coverage" NAME="settings Coverage Results" MODIFIED="1440031271291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite_proj" />
     <SUITE FILE_PATH="coverage/mysite_proj$Unittests_in_NewVisitorTest.coverage" NAME="Unittests in NewVisitorTest Coverage Results" MODIFIED="1438890209838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/polls" />
@@ -107,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77272725">
+            <state vertical-scroll-proportion="-9.444445">
               <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
@@ -141,11 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lists_tests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lists_tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functional_tests/lists_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4444447">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.6363636">
+              <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -201,11 +202,11 @@
         <option value="$PROJECT_DIR$/mysite_proj/urls.py" />
         <option value="$PROJECT_DIR$/lists/models.py" />
         <option value="$PROJECT_DIR$/lists/templates/lists/index.html" />
-        <option value="$PROJECT_DIR$/functional_tests/lists_tests.py" />
         <option value="$PROJECT_DIR$/lists/templates/lists/list.html" />
         <option value="$PROJECT_DIR$/lists/templates/lists/base.html" />
         <option value="$PROJECT_DIR$/lists/static/base.css" />
         <option value="$PROJECT_DIR$/mysite_proj/settings.py" />
+        <option value="$PROJECT_DIR$/functional_tests/lists_tests.py" />
       </list>
     </option>
   </component>
@@ -448,7 +449,7 @@
       <recent name="$PROJECT_DIR$/lists/Templates/lists" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: functional_tests.lists_tests">
+  <component name="RunManager" selected="Django tests.Test: functional_tests.lists_tests.NewVisitorTest.test_layout_and_styling">
     <configuration default="false" name="Test: functional_tests.lists_tests" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -463,26 +464,6 @@
       <module name="mysite_proj" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="TARGET" value="functional_tests.lists_tests" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test: lists.tests.ListViewTest" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mysite_proj" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="lists.tests.ListViewTest" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -543,6 +524,26 @@
       <module name="mysite_proj" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="TARGET" value="functional_tests.lists_tests.LiveNewVisitorTest.test_layout_and_styling" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test: functional_tests.lists_tests.NewVisitorTest.test_layout_and_styling" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mysite_proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="functional_tests.lists_tests.NewVisitorTest.test_layout_and_styling" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -809,18 +810,18 @@
       <item index="0" class="java.lang.String" itemvalue="Django tests.Test: lists.tests" />
       <item index="1" class="java.lang.String" itemvalue="Django server.mysite_proj" />
       <item index="2" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests" />
-      <item index="3" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.ListViewTest" />
-      <item index="4" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewListTest.test_redirects_after_a_POST" />
-      <item index="5" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewItemTest" />
-      <item index="6" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests.LiveNewVisitorTest.test_layout_and_styling" />
+      <item index="3" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewListTest.test_redirects_after_a_POST" />
+      <item index="4" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewItemTest" />
+      <item index="5" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests.LiveNewVisitorTest.test_layout_and_styling" />
+      <item index="6" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests.NewVisitorTest.test_layout_and_styling" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests" />
-        <item index="1" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests.LiveNewVisitorTest.test_layout_and_styling" />
-        <item index="2" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewItemTest" />
-        <item index="3" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewListTest.test_redirects_after_a_POST" />
-        <item index="4" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.ListViewTest" />
+        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests.NewVisitorTest.test_layout_and_styling" />
+        <item index="1" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests" />
+        <item index="2" class="java.lang.String" itemvalue="Django tests.Test: functional_tests.lists_tests.LiveNewVisitorTest.test_layout_and_styling" />
+        <item index="3" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewItemTest" />
+        <item index="4" class="java.lang.String" itemvalue="Django tests.Test: lists.tests.NewListTest.test_redirects_after_a_POST" />
       </list>
     </recent_temporary>
   </component>
@@ -1050,32 +1051,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/functional_tests/lists_tests.py</url>
-          <line>18</line>
+          <line>34</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/functional_tests/lists_tests.py</url>
-          <line>60</line>
+          <line>76</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/functional_tests/lists_tests.py</url>
-          <line>73</line>
+          <line>89</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/functional_tests/lists_tests.py</url>
-          <line>84</line>
+          <line>100</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/functional_tests/lists_tests.py</url>
-          <line>70</line>
+          <line>86</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/functional_tests/lists_tests.py</url>
-          <line>74</line>
+          <line>90</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
@@ -1447,16 +1448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functional_tests/lists_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4444447">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lists/templates/lists/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
@@ -1483,9 +1474,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite_proj/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77272725">
+        <state vertical-scroll-proportion="-9.444445">
           <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functional_tests/lists_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6363636">
+          <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
+          <folding>
+            <element signature="e#24#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

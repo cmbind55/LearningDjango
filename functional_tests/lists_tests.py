@@ -4,9 +4,25 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from django.test import LiveServerTestCase
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-import time
+import time, sys
 
-class LiveNewVisitorTest(StaticLiveServerTestCase):
+
+class NewVisitorTest(StaticLiveServerTestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        for arg in sys.argv:
+            if 'liveserver' in arg:
+                cls.server_url = 'http://' + arg.split('=')[1]
+                return
+        super().setUpClass()
+        cls.server_url = cls.live_server_url
+
+    @classmethod
+    def tearDownClass(cls):
+        if cls.server_url == cls.live_server_url:
+            super().tearDownClass()
+
     def setUp(self):  #2
         #chrome_option = webdriver.ChromeOptions()
         #chrome_option.add_argument('--proxy-server=us-auto.proxy.lexmark.com:80' )
@@ -30,11 +46,11 @@ class LiveNewVisitorTest(StaticLiveServerTestCase):
         # to check out its homepage
         #self.browser.get('http://localhost:8000/lists')
         #self.browser.get('http://www.google.com')
-        #lists_live_server_url = '{0}{1}'.format(self.live_server_url, '/lists')
+        #lists_server_url  = '{0}{1}'.format(self.live_server_url, '/lists')
 
-        lists_live_server_url = '%s%s' % (self.live_server_url, '/lists')
-        #lists_live_server_url = 'http://localhost:8000/lists'
-        self.browser.get(lists_live_server_url)
+        lists_server_url = '%s%s' % (self.server_url, '/lists')
+        #lists_server_url  = 'http://localhost:8000/lists'
+        self.browser.get(lists_server_url )
 
         # She notices the page title and header mention to-do lists
         self.assertIn('To-Do', self.browser.title)
@@ -81,7 +97,7 @@ class LiveNewVisitorTest(StaticLiveServerTestCase):
 
         # Francis visits the home page.  There is no sign of Edith's
         # list
-        self.browser.get(lists_live_server_url)
+        self.browser.get(lists_server_url )
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertNotIn('make a fly', page_text)
@@ -107,3 +123,16 @@ class LiveNewVisitorTest(StaticLiveServerTestCase):
 
         # Satisfied, they both go back to sleep
 
+    def test_layout_and_styling(self):
+        # Edith goes to the home page
+        lists_server_url = '%s%s' % (self.server_url, '/lists')
+        self.browser.get(lists_server_url)
+        self.browser.set_window_size(800, 600)
+
+        # She notices the input box is nicely centered
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        self.assertAlmostEqual(
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            400,
+            delta=5
+        )
