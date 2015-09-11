@@ -4,23 +4,22 @@ from lists.views import home_page
 from django.http import HttpRequest
 from lists.models import Item, List
 from django.utils.html import escape
+from lists.forms import ItemForm
+from django.template.loader import render_to_string
 
 # Create your tests here.
 
 
 class HomePageTest(TestCase):
+    maxDiff = None
 
-    def test_root_url_resolves_to_home_page_view(self):
-        found = resolve('/lists/')
-        self.assertEqual(found.func, home_page)
+    def test_home_page_renders_home_template(self):
+        response = self.client.get('/lists/')
+        self.assertTemplateUsed(response, 'lists/index.html')
 
-    def test_home_page_returns_correct_html(self):
-        request = HttpRequest()
-        response = home_page(request)
-        #expected_html = render_to_string('lists/home.html')
-        #self.assertTrue(response.content.startswith(b'<html>'),msg='ACTUAL CONTENT: {}'.format(response.content))
-        self.assertIn(b'<title>', response.content)
-        #self.assertTrue(response.content.endswith(b'</html>'))
+    def test_home_page_uses_item_form(self):
+        response = self.client.get('/lists/')
+        self.assertIsInstance(response.context['form'], ItemForm)
 
 
 class ListViewTest(TestCase):
