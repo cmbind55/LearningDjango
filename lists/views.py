@@ -9,9 +9,7 @@ from django.core.exceptions import ValidationError
 #    return HttpResponse('')
 
 def home_page(request):
-    return render(request, 'lists/index.html', {
-        'page_title': 'To-Do',
-    })
+    return render(request, 'lists/index.html')
 
 
 def view_list(request, list_id):
@@ -23,11 +21,10 @@ def view_list(request, list_id):
             item = Item(text=request.POST['item_text'], list=list_)
             item.full_clean()
             item.save()
-            return redirect('/lists/%d/' % (list_.id,))
+            return redirect(list_)
         except ValidationError:
             error = "You can't have an empty list item"
     return render(request, 'lists/list.html', {
-        'page_title': 'To-Do',
         'list': list_,
         'error': error
     })
@@ -42,5 +39,5 @@ def new_list(request):
     except ValidationError:
         list_.delete()
         error = "You can't have an empty list item"
-        return render(request, 'lists/index.html', {"error": error, 'page_title': 'To-Do'})
-    return redirect('/lists/%d/' % (list_.id,), {'page_title': 'To-Do'})
+        return render(request, 'lists/index.html', {"error": error})
+    return redirect(list_)
