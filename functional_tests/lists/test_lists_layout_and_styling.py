@@ -9,7 +9,7 @@ class LayoutAndStylingTest(FunctionalTest):
         self.browser.set_window_size(800, 600)
 
         # She notices the input box is nicely centered
-        inputbox = get_item_input_box(self)
+        inputbox = self.get_item_input_box()
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] / 2,
             400,
