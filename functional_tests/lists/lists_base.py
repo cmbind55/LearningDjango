@@ -1,8 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-#from django.test import LiveServerTestCase
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-import time, sys
+import sys
 
 
 class FunctionalTest(StaticLiveServerTestCase):
@@ -21,16 +19,16 @@ class FunctionalTest(StaticLiveServerTestCase):
             super().tearDownClass()
 
     def setUp(self):
-        #chrome_option = webdriver.ChromeOptions()
-        #chrome_option.add_argument('--proxy-server=us-auto.proxy.lexmark.com:80' )
+        # chrome_option = webdriver.ChromeOptions()
+        # chrome_option.add_argument('--proxy-server=us-auto.proxy.lexmark.com:80' )
         self.browser = webdriver.Chrome()
         self.browser.implicitly_wait(3)
-        #self.browser.service()
-        #self.browser.
+        # self.browser.service()
+        # self.browser.
 
     def tearDown(self):
         self.browser.close()
-        #self.browser.quit()
+        # self.browser.quit()
 
     # helper function
     def check_for_row_in_list_table(self, row_text):
