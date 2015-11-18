@@ -46,8 +46,26 @@
 
 </div>
 <script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="https://login.persona.org/include.js"></script>
 <script src="/static/list.js"></script>
+<script src="/static/accounts.js"></script>
+<script>
+    /*global $, lists, navigator */
+    $(document).ready(function () {
+        var token = "{{ csrf_token }}";
+        var user = "{{ usernotyet }}" || "anonymous";
+        console.log("user: " + user);
+        var urls = {
+            login: "TODO",
+            logout: "TODO",
+        };
+        lists.Accounts.initialize(navigator, user, token, urls);
+    });
+</script>
+
+
 </body>
+
 
 </html>
 

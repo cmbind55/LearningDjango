@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'mysite',
     'polls',
     'lists',
+    'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,6 +88,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'lists', 'static'),
+    os.path.join(BASE_DIR, 'accounts', 'static'),
 )
 
 TEMPLATE_DIRS = (
