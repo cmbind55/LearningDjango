@@ -4,7 +4,7 @@ from fabric.api import env, local, run
 import random
 
 REPO_URL = 'https://github.com/cmbind55/LearningDjango.git'
-SITENAME = 'superlists.par7en.com'
+SITENAME = 'superlists-staging.par7en.com'
 
 def deploy():
     site_folder = '/home/%s/sites/%s' % (env.user, SITENAME)
