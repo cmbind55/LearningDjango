@@ -64,6 +64,7 @@ INSTALLED_APPS = (
     'polls',
     'lists',
     'accounts',
+    'functional_tests',
 )
 
 MIDDLEWARE_CLASSES = (
