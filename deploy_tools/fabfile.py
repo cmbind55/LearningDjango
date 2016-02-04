@@ -6,6 +6,7 @@ import random
 REPO_URL = 'https://github.com/cmbind55/LearningDjango.git'
 SITENAME = 'superlists-staging.par7en.com'
 
+
 def deploy():
     site_folder = '/home/%s/sites/%s' % (env.user, SITENAME)
     source_folder = site_folder + '/source'
@@ -62,27 +63,3 @@ def _update_database(source_folder):
     run('cd %s && ../virtualenv/bin/python3 manage.py migrate --noinput' % (
         source_folder,
     ))
-
-
-def _get_base_folder(host):
-    return '~/sites/' + host
-
-
-def _get_manage_dot_py(host):
-    return '{path}/virtualenv/bin/python {path}/source/manage.py'.format(
-        path=_get_base_folder(host)
-    )
-
-
-def reset_database():
-    run('{manage_py} flush --noinput'.format(
-        manage_py=_get_manage_dot_py(env.host)
-    ))
-
-
-def create_session_on_server(email):
-    session_key = run('{manage_py} create_session {email}'.format(
-        manage_py=_get_manage_dot_py(env.host),
-        email=email,
-    ))
-    print(session_key)
