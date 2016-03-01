@@ -10,7 +10,7 @@ PERSONA_VERIFY_URL = 'https://verifier.login.persona.org/verify'
 class PersonaAuthenticationBackend(object):
 
     def authenticate(self, assertion):
-        logger.warning('Entered class PersonaAuthenticationBackend, authenticate()')
+        logger.info('Entered class PersonaAuthenticationBackend, authenticate()')
         response = requests.post(
             PERSONA_VERIFY_URL,
             data={'assertion': assertion, 'audience': settings.DOMAIN}
