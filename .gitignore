@@ -104,4 +104,4 @@ crashlytics.properties
 crashlytics-build.properties
 
 # exclude screenshots from selenium
-functional_tests/screendumps
+functional_tests/lists/screendumps
