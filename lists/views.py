@@ -39,3 +39,10 @@ def view_list(request, list_id):
 def my_lists(request, email):
     owner = User.objects.get(email=email)
     return render(request, 'lists/my_lists.html', {'owner': owner})
+
+
+def share_with(request, list_id):
+    list_ = List.objects.get(id=list_id)
+    list_.shared_with.add(request.POST['email'])
+    return redirect(list_)
+

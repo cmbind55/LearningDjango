@@ -196,12 +196,10 @@ class NewListViewUnitTest(TestCase):
         new_item = Item.objects.first()
         self.assertEqual(new_item.text, 'A new list item')
 
-
     def test_for_invalid_input_doesnt_save_but_shows_errors(self):
         response = self.client.post('/lists/new', data={'text': ''})
         self.assertEqual(List.objects.count(), 0)
         self.assertContains(response, escape(EMPTY_ITEM_ERROR))
-
 
     def test_saves_list_owner_if_user_logged_in(self):
         request = HttpRequest()
@@ -210,3 +208,29 @@ class NewListViewUnitTest(TestCase):
         new_list(request)
         list_ = List.objects.first()
         self.assertEqual(list_.owner, request.user)
+
+
+class ShareListTest(TestCase):
+
+    def test_post_redirects_to_lists_page(self):
+        # We want the share_view view to respond to POST requests,
+        # and it should respond with a redirect back to the list page
+        shared_user = User.objects.create(email='shared@user.com')
+        list_ = List.objects.create()
+        response = self.client.post(
+            '/lists/%d/share' % (list_.id,),
+            data={'email': 'shared@user.com'}
+        )
+        self.assertRedirects(response, list_.get_absolute_url())
+
+    def test_list_is_shared_with_user(self):
+        # this test creates a user (the share-ee) and a list,
+        # does a POST with their email address,
+        # and verifies the user is added to list_.shared_with.all()
+        shared_user = User.objects.create(email='shared@user.com')
+        list_ = List.objects.create()
+        self.client.post(
+            '/lists/%d/share' % (list_.id,),
+            data={'email': 'shared@user.com'}
+        )
+        self.assertIn(shared_user, list_.shared_with.all())

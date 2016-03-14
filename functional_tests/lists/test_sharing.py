@@ -1,7 +1,11 @@
 from selenium import webdriver
 from .lists_base import FunctionalTest
 from .home_and_list_pages import HomePage
+import time
+import logging
+from django.conf import settings
 
+logger = logging.getLogger('functional_tests.lists.test_sharing')
 
 def quit_if_possible(browser):
     try: browser.quit()
@@ -28,22 +32,31 @@ class SharingTest(FunctionalTest):
         list_page = HomePage(self).start_new_list('Get help')
 
         # She notices a "Share this list" option
+        logger.info('She notices a "Share this list" option')
         share_box = list_page.get_share_box()
         self.assertEqual(
             share_box.get_attribute('placeholder'),
-            'your-friend@example.com'
+            'your.friend@mail.com'
         )
+        if(settings.DEBUG = True):
+            time.sleep(2)
 
         # She shares her list.
         # The page updates to say that it's shared with Oniciferous:
+        logger.info('The page updates to say that it''s shared with Oniciferous:')
         list_page.share_list_with('oniciferous@example.com')
+        time.sleep(2)
 
         # Oniciferous now goes to the lists page with his browser
         self.browser = oni_browser
         HomePage(self).go_to_home_page().go_to_my_lists_page()
+        logger.info('Oniciferous now goes to the lists page with his browser')
+        time.sleep(2)
 
         # He sees Edith's list in there!
+        logger.info('He sees Edith''s list in there')
         self.browser.find_element_by_link_text('Get help').click()
+        time.sleep(2)
 
         # On the list page, Oniciferous can see says that it's Edith's list
         self.wait_for(lambda: self.assertEqual(
@@ -53,6 +66,7 @@ class SharingTest(FunctionalTest):
 
         # He adds an item to the list
         list_page.add_new_item('Hi Edith!')
+        time.sleep(2)
 
         # When Edith refreshes the page, she sees Oniciferous's addition
         self.browser = edith_browser

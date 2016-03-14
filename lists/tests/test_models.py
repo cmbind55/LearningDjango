@@ -93,3 +93,14 @@ class ListModelTest(TestCase):
         Item.objects.create(list=list_, text='first item')
         Item.objects.create(list=list_, text='second item')
         self.assertEqual(list_.name, 'first item')
+
+    def test_list_has_method_to_check_for_shared_user(self):
+        # check that a list has a shared_with.add method,
+        # which can be called with a user’s email address and
+        # then check the lists' shared_with.all() queryset,
+        # which will subsequently contain that user.
+        list_ = List.objects.create()
+        shared_user = User.objects.create(email='shared@b.com')
+        list_.shared_with.add(shared_user)
+        list_in_db = List.objects.get(id=list_.id)
+        self.assertIn(shared_user, list_in_db.shared_with.all())
