@@ -38,8 +38,7 @@ class SharingTest(FunctionalTest):
             share_box.get_attribute('placeholder'),
             'your.friend@mail.com'
         )
-        if(settings.DEBUG = True):
-            time.sleep(2)
+        time.sleep(2)
 
         # She shares her list.
         # The page updates to say that it's shared with Oniciferous:
